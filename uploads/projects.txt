@@ -1,6 +1,0 @@
-robotic arm
-llm with RAG
-youtube shorts generator
-depth detection
-rrt and other pathplanning
-Divyansh is 19 years old and he is studying b tech in IIT kharagpur
