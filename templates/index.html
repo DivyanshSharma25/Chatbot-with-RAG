@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot with PDF/DOC Upload</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">Chatbot</div>
+      <form class="file-upload-area" onsubmit="return false;">
+        <label for="file-upload" class="file-label"
+          >📄 Upload PDF/DOC
+          <input
+            type="file"
+            id="file-upload"
+            class="file-upload"
+            accept=".pdf,.doc,.docx"
+          />
+        </label>
+
+        <span class="file-name" id="file-name"></span>
+      </form>
+      <div class="chat-window">
+        <div
+          id="chat-window"
+          style="display: flex; flex-wrap: wrap; flex-direction: column"
+        >
+          <div class="msg bot">
+            Hi! Upload a PDF or DOC file and ask me anything about it.
+          </div>
+        </div>
+        <div class="msg bot" id="responseWait" style="display: none">. . .</div>
+      </div>
+
+      <form class="chat-input-area" id="chat-form" autocomplete="off">
+        <input
+          type="text"
+          class="chat-input"
+          id="chat-input"
+          placeholder="Type your message..."
+          required
+        />
+        <button type="submit" class="send-btn" id="send-btn">Send</button>
+      </form>
+    </div>
+    <script src="{{ url_for('static',filename='js/scripts.js') }}"></script>
+  </body>
+</html>
