@@ -75,23 +75,6 @@ def get_response(query,uploaded):
 
     print("response",response['message']['content'])
     return response['message']['content']
-    
-    # data=json.dumps({
-    #     #meta-llama/llama-4-maverick:free
-    #     "model": "google/gemini-2.0-flash-thinking-exp:free", # Optional    
-    #     "messages":list(message_history_copy),
-        
-        
-    # })
-    # url="https://openrouter.ai/api/v1/chat/completions"
-    # headers={
-    #     "Authorization": "Bearer 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",
-    # }
-    # response = requests.post(url=url, headers=headers, data=data) 
-  
-    # message_history.append({"role": "assistant", "content": response.json()['choices'][0]['message']['content']})
-    # return response.json()['choices'][0]['message']['content']
-
 
 
 
